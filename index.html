@@ -334,11 +334,6 @@ const firebaseConfig = {
 };
 firebase.initializeApp(firebaseConfig);
 
-// ⬇️ Paste your reCAPTCHA v3 site key here (from the App Check setup)
-// App Check disabled for now — will activate once we set it up (Step 2, later)
-// const appCheck = firebase.appCheck();
-// appCheck.activate("PASTE_RECAPTCHA_V3_SITE_KEY_HERE", true);
-
 const db = firebase.database();
 // Secret, unguessable path — keep this string private (don't post it publicly)
 const STATE_REF = db.ref('gx2VDgRKcPj95vl89zpU5Ryh');
@@ -532,8 +527,6 @@ function render(){
   } else {
     html += `<span class="add-link" data-add-cat="1">🐈 Add another cat</span>`;
   }
-
-  html += `<div class="footer-note">🌙 Doses reset automatically at midnight.<br>🏷️ Tap the NFC tag to open this card anytime.</div>`;
 
   app.innerHTML = html;
   attachHandlers();
