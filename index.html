@@ -335,8 +335,9 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 // ⬇️ Paste your reCAPTCHA v3 site key here (from the App Check setup)
-const appCheck = firebase.appCheck();
-appCheck.activate("PASTE_RECAPTCHA_V3_SITE_KEY_HERE", true);
+// App Check disabled for now — will activate once we set it up (Step 2, later)
+// const appCheck = firebase.appCheck();
+// appCheck.activate("PASTE_RECAPTCHA_V3_SITE_KEY_HERE", true);
 
 const db = firebase.database();
 // Secret, unguessable path — keep this string private (don't post it publicly)
